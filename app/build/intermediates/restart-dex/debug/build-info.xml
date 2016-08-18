@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="23"
+    density="420dpi"
+    format="7"
+    timestamp="6853104085090"
+    token="1219929533844293002"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="275" />
+    <task
+        name="instant-run-dex"
+        duration="587" />
+    <task
+        name="instant-run-transform"
+        duration="20" />
+    <task
+        name="verifier"
+        duration="4" />
+
+    <artifact
+        location="C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
+
+    <build timestamp="4230752340358" >
+        <artifact
+            location="C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="4911592701125"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\builds\debug\4911592701125\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build timestamp="5036856628929" >
+        <artifact
+            location="C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+    <build timestamp="6777245691326" >
+        <artifact
+            location="C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="6853104085090"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>
