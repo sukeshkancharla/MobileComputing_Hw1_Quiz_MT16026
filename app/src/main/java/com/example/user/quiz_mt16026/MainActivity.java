@@ -1,6 +1,7 @@
 package com.example.user.quiz_mt16026;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,13 +14,18 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     public static final String question_value="value";
+    public static final int REQUEST_CODE=1;
     public static final String correct_questions="Corrects";
     public static final String questions_attempted="questions";
     public static final String question_attempted="isAttempted";
     public static final String is_correct="isCorrect";
+    public static final String question="question";
+    public static final String result_class="resultClass";
     private boolean attempt=false;
     private boolean isCorrect=false;
     private Button mNextButton;
+    private Button mHintButton;
+    private Button mCheatButton;
     private Button mCorrectButton;
     private Button mIncorrectButton;
     private TextView mNumberText;
@@ -36,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         int num;
         findViewById(R.id.Quiz_Correct_Button).setEnabled(true);
         findViewById(R.id.Quiz_Incorrect_Button).setEnabled(true);
+        mCheatButton=(Button)findViewById(R.id.cheat_button);
+        mCheatButton.setEnabled(true);
+        mHintButton=(Button)findViewById(R.id.hint_button);
+        mHintButton.setEnabled(true);
         if(savedInstanceState==null)
         {
             Random r=new Random();
@@ -88,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
                 mCorrectButton.setEnabled(true);
                 mIncorrectButton=(Button)findViewById(R.id.Quiz_Incorrect_Button);
                 mIncorrectButton.setEnabled(true);
+                mCheatButton=(Button)findViewById(R.id.cheat_button);
+                mCheatButton.setEnabled(true);
+                mHintButton=(Button)findViewById(R.id.hint_button);
+                mHintButton.setEnabled(true);
                 mQuestionText=(TextView)findViewById(R.id.Quiz_Question_Text);
                 mQuestionText.setTextColor(Color.parseColor("#000000"));
                 mNumberText.setTextColor(Color.parseColor("#000000"));
@@ -115,6 +129,10 @@ public class MainActivity extends AppCompatActivity {
                 mCorrectButton.setEnabled(false);
                 mIncorrectButton=(Button)findViewById(R.id.Quiz_Incorrect_Button);
                 mIncorrectButton.setEnabled(false);
+                mHintButton=(Button)findViewById(R.id.hint_button);
+                mHintButton.setEnabled(false);
+                mCheatButton=(Button)findViewById(R.id.cheat_button);
+                mCheatButton.setEnabled(false);
                 questions++;
                 if(flag==1)
                 {
@@ -161,6 +179,10 @@ public class MainActivity extends AppCompatActivity {
                 mCorrectButton.setEnabled(false);
                 mIncorrectButton=(Button)findViewById(R.id.Quiz_Incorrect_Button);
                 mIncorrectButton.setEnabled(false);
+                mHintButton=(Button)findViewById(R.id.hint_button);
+                mHintButton.setEnabled(false);
+                mCheatButton=(Button)findViewById(R.id.cheat_button);
+                mCheatButton.setEnabled(false);
                 questions++;
                 if(flag==1)
                 {
@@ -184,6 +206,25 @@ public class MainActivity extends AppCompatActivity {
                 mCorrectsText.setText(correct_Answers+" are correct out of "+questions+" questions attempted");
             }
         });
+        mHintButton=(Button)findViewById(R.id.hint_button);
+        mHintButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                Intent i=new Intent(getApplicationContext(),HintActivity.class);
+                startActivityForResult(i,REQUEST_CODE);
+            }
+        });
+        mCheatButton=(Button)findViewById(R.id.cheat_button);
+        mCheatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),CheatActivity.class);
+                mQuestionText=(TextView)findViewById(R.id.Quiz_Question_Text);
+                i.putExtra(question,Integer.parseInt(mNumberText.getText().toString()));
+                startActivityForResult(i,REQUEST_CODE);
+            }
+        });
     }
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState)
@@ -197,5 +238,22 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt(correct_questions,correct_Answers);
         savedInstanceState.putInt(questions_attempted,questions);
     }
-
+    @Override
+    public void onActivityResult(int requestCode,int resultCode,Intent data)
+    {
+        if(REQUEST_CODE==requestCode)
+        {
+            if(resultCode==RESULT_OK)
+            {
+                if(data.getStringExtra(MainActivity.result_class).equals("hint"))
+                {
+                    Toast.makeText(getApplicationContext(),"Hint Taken",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Cheated",Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
 }

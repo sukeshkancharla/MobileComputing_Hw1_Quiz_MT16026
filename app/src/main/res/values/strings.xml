@@ -4,4 +4,8 @@
     <string name="correct_button">Correct</string>
     <string name="incorrect_button">InCorrect</string>
     <string name="next_button">Next</string>
+    <string name="hint">Hint</string>
+    <string name="cheat">Cheat</string>
+    <string name="show_hint">Show Hint</string>
+    <string name="show_answer">Show Answer</string>
 </resources>

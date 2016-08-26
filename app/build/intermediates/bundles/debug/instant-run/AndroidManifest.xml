@@ -22,6 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.user.quiz_mt16026.HintActivity" />
+        <activity android:name="com.example.user.quiz_mt16026.CheatActivity" />
     </application>
 
 </manifest>

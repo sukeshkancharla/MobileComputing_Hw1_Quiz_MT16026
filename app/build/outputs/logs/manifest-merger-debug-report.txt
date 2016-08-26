@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:2:1-20:12
+ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:2:1-22:12
 	package
 		ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\Android
 		INJECTED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:5:5-18:19
+ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:5:5-20:19
 MERGED from [com.android.support:appcompat-v7:24.1.1] C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:24.1.1] C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:24.1.1] C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
@@ -46,6 +46,14 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:15:17-77
 	android:name
 		ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:15:27-74
+activity#com.example.user.quiz_mt16026.HintActivity
+ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:18:9-59
+	android:name
+		ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:18:19-47
+activity#com.example.user.quiz_mt16026.CheatActivity
+ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:19:9-60
+	android:name
+		ADDED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml:19:19-48
 uses-sdk
 INJECTED from C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:24.1.1] C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:21:5-23:78

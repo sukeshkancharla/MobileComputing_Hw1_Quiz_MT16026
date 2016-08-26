@@ -1,2 +1,0 @@
-CHANGED,C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\user\quiz_mt16026\MainActivity$2.class
-CHANGED,C:\Users\user\AndroidStudioProjects\Quiz_MT16026\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\user\quiz_mt16026\MainActivity$3.class
